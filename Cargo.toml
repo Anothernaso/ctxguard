@@ -1,0 +1,18 @@
+[package]
+name = "ctxguard"
+version = "0.1.0"
+authors = ["Anatnaso <antondev@kuthy.com>"]
+edition = "2024"
+repository = "https://github.com/Anothernaso/ctxguard"
+homepage = "https://github.com/Anothernaso/ctxguard"
+keywords = ["context", "thread-safe"]
+categories = ["asynchronous", "concurrency", "data-structures"]
+
+[dependencies]
+tokio = { version = "1.49.0", optional = true, features = ["sync"]}
+
+[features]
+default = ["std-sync"]
+
+std-sync = []
+tokio-sync = ["tokio"]
